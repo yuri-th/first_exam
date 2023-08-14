@@ -1,0 +1,88 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    margin: 0, auto;
+}
+
+button {
+    border: none;
+}
+
+/* 非活性化 */
+button:disabled {
+    color: #d3d3d3;
+}
+
+
+.header-nav-list {
+    display: flex;
+    font-weight: bold;
+}
+
+.header-nav-item {
+    margin-right: 50px;
+}
+
+.header-nav__button {
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+    padding: 0;
+}
+
+.greeting__alert {
+    text-align: center;
+    font-weight: 700;
+    font-size: 23px;
+    margin-top: 30px;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 30px;
+}
+
+.attendance__time {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.timestamp {
+    width: 100%;
+}
+
+.attendance__time--start,
+.attendance__time--end {
+    width: 100%;
+    padding: 80px 0;
+    color: #000000;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.break__time {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+.break__time--start,
+.break__time--end {
+    width: 100%;
+    padding: 80px 0;
+    color: #000000;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}

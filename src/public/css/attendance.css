@@ -1,0 +1,183 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+}
+
+main {
+    margin: 0, auto;
+}
+
+h1 {
+    font-size: 25px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+span,
+label,
+input {
+    display: inline-block;
+}
+
+/* ナビ */
+
+.header-nav-list {
+    display: flex;
+    font-weight: bold;
+}
+
+.header-nav-item {
+    margin-right: 50px;
+}
+
+.header-nav__button {
+    background-color: transparent;
+    font-size: medium;
+    font-weight: 700;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+}
+
+/* 日付リンク */
+.date__btn--right,
+.date__btn--left {
+    background: white;
+    border: 1px solid #0000ff;
+    color: #0000ff;
+    font-weight: 700;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.date_display {
+    margin: 30px 0 30px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.date_display h1 {
+    display: inline;
+    padding-left: 30px;
+}
+
+
+
+
+.form-content {
+    border: 1px solid #000;
+    width: 90%;
+    margin: 0 auto 50px;
+    padding: 50px 70px 10px 70px;
+}
+
+.form-table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ----------------見出し部分----------------
+.title {
+    font-weight: bold;
+    width: 150px;
+}
+
+.title-gender {
+    font-weight: bold;
+    width: 50px;
+    margin-left: 50px;
+} */
+
+/* ----------------入力部分---------------- */
+input {
+    width: 250px;
+    height: 50px;
+    border: 1px solid #c7c7c7;
+    border-radius: 5px;
+}
+
+input[name="gender"] {
+    width: 70px;
+    height: 40px;
+}
+
+/* ----------------テーブル部分---------------- */
+
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    border-bottom: 1px solid #000;
+}
+
+th,
+td {
+    padding: 10px 30px;
+    word-break: break-all;
+}
+
+tr {
+    height: 60px;
+}
+
+.table-id {
+    width: 100px;
+}
+
+
+
+
+
+
+
+/* -------------ページネーション------------- */
+.table-page {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 0;
+}
+
+.pagination li {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    float: left;
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: #0000ff;
+}
+
+.pagination .active {
+    background-color: #4169e1;
+    border: 1px solid #ddd;
+    color: white;
+}
+
+.pagination li:not(.active, .disabled) {
+    background-color: white;
+}
