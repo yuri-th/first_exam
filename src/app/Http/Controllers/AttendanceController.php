@@ -43,7 +43,6 @@ class AttendanceController extends Controller
         ]);
 
 
-
         return redirect()->back();
 
     }
@@ -59,6 +58,13 @@ class AttendanceController extends Controller
 
         //1日の休憩時間の合計
         $breakTime = Rest::where('attendance_id', $timeOut->id)->select('total_time')->sum('total_time');
+        
+        // //時間の修正
+        // $hours = floor($breakTime / 3600);
+        // $minutes = floor(($breakTime % 3600) / 60);
+        // $seconds = $breakTime % 60;
+        
+        
        
         //実労働時間の計算
         $stayTime = $punchIn->diffInSeconds($now);      
