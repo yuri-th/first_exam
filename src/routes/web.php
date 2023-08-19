@@ -17,19 +17,17 @@ use App\Http\Controllers\RestController;
 */
 
 Route::middleware('auth')->group(function () {
-Route::get('/', [AuthController::class, 'index']);
- });
+    
+    Route::get('/', [AuthController::class, 'index']);
+ 
 
 //出退勤打刻
     Route::prefix('attendance')->group(function () {
     Route::get('/', [AttendanceController::class, 'getAttendance']);
-    Route::get('/add', [AttendanceController::class, 'addAttendance']);
     Route::post('/add', [AttendanceController::class, 'addAttendance']);
-    Route::get('/sub', [AttendanceController::class, 'subAttendance']);
     Route::post('/sub', [AttendanceController::class, 'subAttendance']);
     Route::post('/start', [AttendanceController::class, 'startAttendance']);
     Route::post('/end', [AttendanceController::class, 'endAttendance']);
-    Route::get('/end', [AttendanceController::class, 'endAttendance']);
     
 });
 
@@ -37,5 +35,6 @@ Route::get('/', [AuthController::class, 'index']);
     Route::prefix('break')->group(function () {
     Route::post('/start', [RestController::class, 'startRest']);
     Route::post('/end', [RestController::class, 'endRest']);
-    Route::get('/end', [RestController::class, 'endRest']);
+});
+
 });

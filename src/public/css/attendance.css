@@ -14,9 +14,6 @@ button {
     border: none;
 }
 
-main {
-    margin: 0, auto;
-}
 
 h1 {
     font-size: 25px;
@@ -25,7 +22,6 @@ h1 {
 }
 
 span,
-label,
 input {
     display: inline-block;
 }
@@ -48,14 +44,6 @@ input {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    border: none;
-}
 
 /* 日付リンク */
 .date__btn--right,
@@ -69,7 +57,7 @@ button {
 }
 
 .date_display {
-    margin: 30px 0 30px;
+    margin: 30px 0 50px;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -83,46 +71,13 @@ button {
 
 
 
-
-.form-content {
-    border: 1px solid #000;
-    width: 90%;
-    margin: 0 auto 50px;
-    padding: 50px 70px 10px 70px;
-}
-
 .form-table {
     width: 90%;
     margin: 0 auto;
 }
 
-/* ----------------見出し部分----------------
-.title {
-    font-weight: bold;
-    width: 150px;
-}
 
-.title-gender {
-    font-weight: bold;
-    width: 50px;
-    margin-left: 50px;
-} */
-
-/* ----------------入力部分---------------- */
-input {
-    width: 250px;
-    height: 50px;
-    border: 1px solid #c7c7c7;
-    border-radius: 5px;
-}
-
-input[name="gender"] {
-    width: 70px;
-    height: 40px;
-}
-
-/* ----------------テーブル部分---------------- */
-
+/* テーブル */
 
 table {
     width: 100%;
@@ -130,7 +85,16 @@ table {
 }
 
 th {
+    border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+}
+
+td {
+    border-bottom: 1px solid #000;
+}
+
+tr:last-child td {
+    border: none;
 }
 
 th,
@@ -142,11 +106,6 @@ td {
 tr {
     height: 60px;
 }
-
-.table-id {
-    width: 100px;
-}
-
 
 
 

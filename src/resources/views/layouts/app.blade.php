@@ -32,7 +32,6 @@
     <footer class="footer">
         <small>Atte,inc.</small>
     </footer>
-    @yield('js')
 </body>
 
 

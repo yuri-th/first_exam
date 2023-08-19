@@ -27,15 +27,11 @@
 
 <div class="date_display">
   <div>
-    <form action="/attendance/sub" method="post" >
+    <form action="/attendance/sub" method="post">
       @csrf
-      
       <button class="date__btn--right" id="prevDay">＜</button>
-      
-      @foreach ($forms as $form)
-      <h1>{{$form->date}}</h1>
-      <?php break;?>
-      @endforeach
+      <h1>{{$dateDisplay}}</h1>
+      <input type="hidden" name="date_Display" value="{{$dateDisplay}}" />
     </form>
   </div>
 
@@ -43,6 +39,7 @@
     <form action="/attendance/add" method="post">
       @csrf
       <button class="date__btn--left" id="nextDay">＞</button>
+      <input type="hidden" name="date_Display" value="{{$dateDisplay}}" />
     </form>
   </div>
 </div>
@@ -50,7 +47,7 @@
 <div class="form-table">
   <table>
     <tr class="table-title">
-      <th>お名前</th>
+      <th>名前</th>
       <th>勤務開始</th>
       <th>勤務終了</th>
       <th>休憩時間</th>
@@ -64,10 +61,8 @@
       <td>{{ $form->start_time }}</td>
       <td>{{ $form->end_time }}</td>
       <td>{{ $form->breakTime }}</td>
-      <!-- <td>@foreach($form->rests as $obj){{ $obj->start_time }}@endforeach</td> -->
       <td>{{ $form->workingTime }}</td>
     </tr>
-    </form>
     @endforeach
   </table>
   <div class="table-page">
@@ -77,6 +72,3 @@
   </div>
 </div>
 @endsection
-
-
-

@@ -4,27 +4,34 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Models\Rest;
 use App\Models\Attendance;
-
 use Illuminate\Http\Request;
 
 class RestController extends Controller
 {
     //休憩開始
-    public function startRest() {
+    public function startRest(request $request) {
         $user = auth()->user();           
         $pastattendance = Attendance::where('user_id',$user->id)->latest()->first();
-        //最新の勤怠を取得      
+        
 
         Rest::create([
             'attendance_id' => $pastattendance->id,
             'start_time' => Carbon::now(),
         ]);
         
-        return redirect()->back();
+        
+        return view('index', [
+            'startDisabled' => true,
+            'endDisabled' => true,
+            'rest_sDisabled' => true,
+            'rest_eDisabled' => false,
+        
+        ]);
+        
     }
 
     //休憩終了
-    public function endRest() {
+    public function endRest(request $request) {
         $user = auth()->user();
         $attendance = Attendance::where('user_id',$user->id)->latest()->first();           
         $restOut = Rest::where('attendance_id',$attendance->id)->latest()->first();
@@ -42,7 +49,14 @@ class RestController extends Controller
                                    
                     ]);
         
-        return redirect()->back();
+        return view('index', [
+            'startDisabled' => true,
+            'endDisabled' => false,
+            'rest_eDisabled' => true,
+            'rest_sDisabled' => false
+            
+            ]);
+    
     }
 
 
