@@ -24,7 +24,9 @@ Route::middleware('auth')->group(function () {
 //出退勤打刻
     Route::prefix('attendance')->group(function () {
     Route::get('/', [AttendanceController::class, 'getAttendance']);
+    Route::get('/add', [AttendanceController::class, 'addAttendance']);
     Route::post('/add', [AttendanceController::class, 'addAttendance']);
+    Route::get('/sub', [AttendanceController::class, 'subAttendance']);
     Route::post('/sub', [AttendanceController::class, 'subAttendance']);
     Route::post('/start', [AttendanceController::class, 'startAttendance']);
     Route::post('/end', [AttendanceController::class, 'endAttendance']);
